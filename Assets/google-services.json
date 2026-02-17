@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "453001194456",
+    "project_id": "treattask-9496f",
+    "storage_bucket": "treattask-9496f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453001194456:android:941142874f3ae98b3260ad",
+        "android_client_info": {
+          "package_name": "com.fleaxa.treat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY3hgbgpxQ8VRqG3_NhOkakCIXnfgY790"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
