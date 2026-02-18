@@ -1,0 +1,30 @@
+# Unity generated / cache folders — never commit
+Library/
+Temp/
+Logs/
+UserSettings/
+obj/
+*.csproj
+*.sln
+*.unityproj
+*.DS_Store
+
+# Burst native libraries (very large, auto-generated)
+Library/PackageCache/com.unity.burst*/**/*.dylib
+Library/PackageCache/com.unity.burst*/**/*.so
+Library/PackageCache/com.unity.burst*/**/*.dll
+
+# Archives, zips, backups — never commit
+*.zip
+*.rar
+*.7z
+*.backup
+*.bak
+
+# Firebase native plugins (from previous attempts)
+Assets/Firebase/Plugins/**/*.bundle
+Assets/Firebase/Plugins/**/*.so
+Assets/Firebase/Plugins/**/*.dll
+Assets/Firebase/Plugins/x86_64/
+Assets/Firebase/Plugins/iOS/
+Assets/Firebase/Plugins/Android/
