@@ -1,4 +1,6 @@
+using Packages.GlobalStates.StatesSignals;
 using ShootCommon.GlobalStateMachine;
+using Stateless;
 
 namespace Packages.GlobalStates
 {
@@ -6,7 +8,8 @@ namespace Packages.GlobalStates
     {
         protected override void Configure()
         {
-            //Permit<StartState>(StateMachineTriggers.Start);
+            Permit<StartState>(StateMachineTriggers.StartState);
         }
+
     }
 }

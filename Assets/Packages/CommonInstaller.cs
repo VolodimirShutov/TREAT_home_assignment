@@ -11,7 +11,6 @@ namespace Zenject
             ShootCommonInstaller.Install(Container);
             FirebaseInstaller.Install(Container);
             
-            
             GlobalStateMachineInstaller.Install(Container);
         }
     }

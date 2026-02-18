@@ -2,6 +2,8 @@ namespace ShootCommon.GlobalStateMachine
 {
     public enum StateMachineTriggers 
     {
-        Start,
+        StartState,
+        GetConfigState,
+        ShowMainMenuState
     }
 }

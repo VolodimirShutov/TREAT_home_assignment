@@ -16,12 +16,20 @@ namespace FirebaseModul
         private FirebaseFirestore _firestore;
 
         public bool IsInitialized { get; private set; }
-        public string UserId { get; private set; } // UID або анонімний ідентифікатор
+        public string UserId { get; private set; } 
+        
+        private SignalService _signalService; 
 
-        [Inject] private SignalService _signalService; // якщо хочеш сигнал після ініціалізації
-
+        [Inject]
+        public void Init(SignalService signalService)
+        {
+            _signalService = signalService;
+            Initialize();
+        }
+        
         public async void Initialize()
         {
+            Debug.Log("FirebaseController initialized");
             try
             {
                 var dependencyStatus = await FirebaseApp.CheckAndFixDependenciesAsync();

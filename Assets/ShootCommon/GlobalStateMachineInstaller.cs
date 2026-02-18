@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using Packages.GlobalStates;
 using ShootCommon.GlobalStateMachine;
+using UnityEngine;
 using Zenject;
 
 namespace ShootCommon
@@ -9,7 +10,11 @@ namespace ShootCommon
     {
         public override void InstallBindings()
         {
+            Debug.Log(" GlobalStateMachine Installer");
             Container.BindState<InitState>();
+            Container.BindState<StartState>();
+            Container.BindState<GetConfigState>();
+            Debug.Log(" GlobalStateMachine Installer State binded");
             
             Container.BindInterfacesTo<StateMachineController>().AsSingle();
         }

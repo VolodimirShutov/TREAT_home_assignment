@@ -1,3 +1,5 @@
+using FirebaseModul.Configs;
+using UnityEngine;
 using Zenject;
 
 namespace FirebaseModul
@@ -6,6 +8,17 @@ namespace FirebaseModul
     {
         public override void InstallBindings()
         {
+            Debug.Log("FirebaseInstaller install");
+            
+            Container.Bind<GameDifficultyConfig>()
+                .FromResource("GameDifficultyConfig") 
+                .AsSingle();
+            
+            Container.Bind<IGameConfigController>()
+                .To<GameConfigController>()
+                .AsSingle()
+                .NonLazy(); 
+            
             Container.Bind<FirebaseController>().AsSingle().NonLazy();
         }
     }
