@@ -14,6 +14,8 @@ namespace ShootCommon
             Container.BindState<InitState>();
             Container.BindState<StartState>();
             Container.BindState<GetConfigState>();
+            Container.BindState<ShowMainMenuState>();
+            
             Debug.Log(" GlobalStateMachine Installer State binded");
             
             Container.BindInterfacesTo<StateMachineController>().AsSingle();

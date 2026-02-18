@@ -4,6 +4,12 @@ namespace ShootCommon.GlobalStateMachine
     {
         StartState,
         GetConfigState,
-        ShowMainMenuState
+        ShowMainMenuState,
+        
+        InitStartGame,
+        Game,
+        GameOver,
+        
+        
     }
 }

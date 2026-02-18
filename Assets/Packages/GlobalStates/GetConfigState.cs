@@ -9,7 +9,7 @@ namespace Packages.GlobalStates
     {
         protected override void Configure()
         {
-
+            Permit<ShowMainMenuState>(StateMachineTriggers.ShowMainMenuState);
         }
 
         protected override void OnEntry(StateMachine<IState, StateMachineTriggers>.Transition transition = null)
@@ -23,8 +23,7 @@ namespace Packages.GlobalStates
         private void FirebaseConfigUpdated(FirebaseConfigUpdatedSignal signal)
         {
             Debug.Log($"FirebaseConfigUpdated: {signal}");
-            
-            //Fire(StateMachineTriggers.ShowMainMenuState);
+            Fire(StateMachineTriggers.ShowMainMenuState);
         }
     }
 }
