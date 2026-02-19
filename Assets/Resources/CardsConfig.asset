@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 031a2874280641c5a433aeb10662f55f, type: 3}
+  m_Name: CardsConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Packages.GameControl.Card.CardsConfig
+  cards:
+  - cardId: 1
+    frontSprite: {fileID: -8822964745596161490, guid: 0cb12028ed42c425e92e2efb04089d5a, type: 3}
+  - cardId: 2
+    frontSprite: {fileID: -600262023924230473, guid: 14dbcf4222f96467c9a51e60f3874030, type: 3}
+  - cardId: 3
+    frontSprite: {fileID: 802998337703612958, guid: fa734c02cda554f3e986dbf202cddc5f, type: 3}
+  - cardId: 4
+    frontSprite: {fileID: 752205048970604372, guid: 188e90d47a0784e2ea07955da60b7856, type: 3}
+  - cardId: 5
+    frontSprite: {fileID: -1116057039825379557, guid: 32b81918865194396ba5b57552554f66, type: 3}
+  - cardId: 6
+    frontSprite: {fileID: 6021453548537641068, guid: 16d34be5280ee455393788ad96d57cdc, type: 3}
+  - cardId: 7
+    frontSprite: {fileID: 752205048970604372, guid: 188e90d47a0784e2ea07955da60b7856, type: 3}
+  - cardId: 8
+    frontSprite: {fileID: 85405039182983323, guid: 9c2037de6418446ee94e529f38e6b3ae, type: 3}
+  - cardId: 9
+    frontSprite: {fileID: 5885838049323942180, guid: dc23bbce4ee734d78b4db3ce44608148, type: 3}
+  - cardId: 10
+    frontSprite: {fileID: -2328425076416338687, guid: 5f7fd58a373b84202a4e1f99ffaf93a1, type: 3}
+  backSprite: {fileID: 0}

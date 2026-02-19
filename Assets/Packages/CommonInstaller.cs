@@ -1,6 +1,7 @@
 using FirebaseModul;
 using ShootCommon;
 using UnityEngine;
+using Zenject.GameControl;
 
 namespace Zenject
 {
@@ -10,6 +11,10 @@ namespace Zenject
         {
             ShootCommonInstaller.Install(Container);
             FirebaseInstaller.Install(Container);
+            
+            Container.Bind<GameController>()
+                .AsSingle()
+                .NonLazy();
             
             GlobalStateMachineInstaller.Install(Container);
         }

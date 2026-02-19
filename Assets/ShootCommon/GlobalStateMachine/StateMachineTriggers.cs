@@ -7,8 +7,9 @@ namespace ShootCommon.GlobalStateMachine
         ShowMainMenuState,
         
         InitStartGame,
-        Game,
-        GameOver,
+        GameState,
+        RestartGameState,
+        GameOverState,
         
         
     }

@@ -13,8 +13,7 @@ namespace Packages.GlobalStates
         {
             Permit<InitStartGame>(StateMachineTriggers.InitStartGame);
         }
-
-
+        
         protected override void OnEntry(StateMachine<IState, StateMachineTriggers>.Transition transition = null)
         {
             InteractiveObjectsManager.Instance.Instantiate("MainMenu", "MainMenuUi");
@@ -30,7 +29,7 @@ namespace Packages.GlobalStates
         private async UniTaskVoid DelayAndFire()
         {
             await UniTask.NextFrame();
-            Fire(StateMachineTriggers.GetConfigState);
+            Fire(StateMachineTriggers.InitStartGame);
         }
     }
 }

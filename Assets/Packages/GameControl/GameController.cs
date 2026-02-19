@@ -1,4 +1,5 @@
 using ShootCommon.SignalSystem;
+using UnityEngine;
 using Zenject.GameControl.Signals;
 
 namespace Zenject.GameControl
@@ -14,6 +15,7 @@ namespace Zenject.GameControl
         [Inject]
         public void Init(SignalService signalService)
         {
+            Debug.Log("GameController Init");
             _signalService = signalService;
             _signalService.Subscribe<StartGameSignal>(StartGame);
         }
