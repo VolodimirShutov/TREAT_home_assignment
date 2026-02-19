@@ -19,6 +19,7 @@ namespace ShootCommon
             Container.BindState<GameState>();
             Container.BindState<RestartGameState>();
             Container.BindState<GameOverState>();
+            Container.BindState<GameWinState>();
             
             Debug.Log(" GlobalStateMachine Installer State binded");
             

@@ -1,8 +1,9 @@
 using Cysharp.Threading.Tasks;
+using FirebaseModul;
 using ShootCommon.GlobalStateMachine;
 using ShootCommon.InteractiveObjectsSpawnerService;
 using Stateless;
-using Zenject.GameControl.Signals;
+using Zenject;
 
 namespace Packages.GlobalStates
 {
@@ -12,6 +13,7 @@ namespace Packages.GlobalStates
         {
             Permit<GameState>(StateMachineTriggers.GameState);
         }
+
         
         protected override void OnEntry(StateMachine<IState, StateMachineTriggers>.Transition transition = null)
         {
@@ -22,7 +24,6 @@ namespace Packages.GlobalStates
         {
             InteractiveObjectsManager.Instance.Instantiate("GameLevel", "GameContainer");
             await UniTask.NextFrame();
-            
             
             Fire(StateMachineTriggers.GameState);
         }

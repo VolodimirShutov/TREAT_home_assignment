@@ -1149,7 +1149,7 @@ MonoBehaviour:
   difficultySlider: {fileID: 2293737317548547327}
   levelText: {fileID: 2211694661571591321}
   pairsText: {fileID: 41684718339830096}
-  timeText: {fileID: 41684718339830096}
+  timeText: {fileID: 5582423488492958762}
   startButton: {fileID: 298154494373742497}
 --- !u!1 &7097777886038601802
 GameObject:

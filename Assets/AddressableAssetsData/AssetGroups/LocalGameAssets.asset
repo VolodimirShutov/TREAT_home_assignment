@@ -20,8 +20,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 423bbdc72b2f240978f32f2da0f20359
+    m_Address: WinPanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 434529ecb2fd54757bd03e3c725ad72d
+    m_Address: FireErrorPanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 75ee7d1e7c4a641d5a504c3bb9b751b7
     m_Address: GameLevel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dad05ba5cef604fa1898db1c2c1aaaba
+    m_Address: LoosePanel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

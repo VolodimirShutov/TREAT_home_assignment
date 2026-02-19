@@ -10,6 +10,7 @@ namespace ShootCommon.GlobalStateMachine
         GameState,
         RestartGameState,
         GameOverState,
+        GameWinState
         
         
     }

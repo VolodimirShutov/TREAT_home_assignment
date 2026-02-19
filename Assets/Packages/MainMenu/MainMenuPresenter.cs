@@ -3,8 +3,8 @@ using UnityEngine.UI;
 using TMPro;
 using Zenject;
 using FirebaseModul.Configs;
+using Packages.GameControl.Signals;
 using ShootCommon.SignalSystem;
-using Zenject.GameControl.Signals;
 
 namespace Packages.MainMenu
 {

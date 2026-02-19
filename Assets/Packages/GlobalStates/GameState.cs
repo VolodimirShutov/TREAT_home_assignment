@@ -11,15 +11,18 @@ namespace Packages.GlobalStates
         {
             Permit<GameOverState>(StateMachineTriggers.GameOverState);
             Permit<RestartGameState>(StateMachineTriggers.RestartGameState);
+            Permit<GameWinState>(StateMachineTriggers.GameWinState);
         }
-        
         
         protected override void OnEntry(StateMachine<IState, StateMachineTriggers>.Transition transition = null)
         {
             var r_signal = SignalService.Subscribe<RestartGameSignal>(RestartGame);
             var go_signal = SignalService.Subscribe<GameOverSignal>(GameOver);
+            var gw_signal = SignalService.Subscribe<GameWinSignal>(GameWin);
+            
             DisposeOnExit.Add(r_signal);
             DisposeOnExit.Add(go_signal);
+            DisposeOnExit.Add(gw_signal);
         }
 
         private void RestartGame(RestartGameSignal signal)
@@ -30,6 +33,11 @@ namespace Packages.GlobalStates
         private void GameOver(GameOverSignal signal)
         {
             Fire(StateMachineTriggers.GameOverState);
+        }
+
+        private void GameWin(GameWinSignal signal)
+        {
+            Fire(StateMachineTriggers.GameWinState);
         }
     }
 }

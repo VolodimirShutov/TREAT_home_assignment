@@ -1,6 +1,6 @@
 using ShootCommon.SignalSystem;
 
-namespace Zenject.GameControl.Signals
+namespace Packages.GameControl.Signals
 {
     public class StartGameSignal : Signal
     {

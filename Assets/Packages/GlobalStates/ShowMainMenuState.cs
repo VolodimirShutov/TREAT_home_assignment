@@ -1,8 +1,8 @@
 using Cysharp.Threading.Tasks;
+using Packages.GameControl.Signals;
 using ShootCommon.GlobalStateMachine;
 using ShootCommon.InteractiveObjectsSpawnerService;
 using Stateless;
-using Zenject.GameControl.Signals;
 
 namespace Packages.GlobalStates
 {

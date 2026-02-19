@@ -7,20 +7,22 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:453001194456:android:941142874f3ae98b3260ad",
+        "mobilesdk_app_id": "1:453001194456:ios:d4e3f98d9552d3fd3260ad",
         "android_client_info": {
           "package_name": "com.fleaxa.treat"
         }
       },
-      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBY3hgbgpxQ8VRqG3_NhOkakCIXnfgY790"
+          "current_key": "AIzaSyDypGFggNjRcP69CuQE1UyCG2bOQZdZ_d0"
         }
       ],
       "services": {
+        "analytics_service": {
+          "status": 0
+        },
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "status": 1
         }
       }
     }

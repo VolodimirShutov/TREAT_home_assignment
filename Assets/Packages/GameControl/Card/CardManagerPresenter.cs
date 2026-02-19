@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Features.Gameplay.Cards;
-using Packages.GameControl.Card;
 using Packages.GameControl.Signals;
 using ShootCommon.SignalSystem;
 using UnityEngine;
@@ -9,7 +8,7 @@ using UnityEngine.UI;
 using Zenject;
 using Random = UnityEngine.Random;
 
-namespace Zenject.GameControl.Card
+namespace Packages.GameControl.Card
 {
     public class CardManagerPresenter : MonoBehaviour
     {
@@ -19,6 +18,7 @@ namespace Zenject.GameControl.Card
 
         [SerializeField] private Transform gridParent;
         [SerializeField] private GameObject cardPrefab;
+        [SerializeField] private GameObject sreenBlocker;
 
         private List<CardPresenter> _activeCards = new List<CardPresenter>();
 
@@ -28,7 +28,9 @@ namespace Zenject.GameControl.Card
         private void Awake()
         {
             ProjectContext.Instance.Container.Inject(this);
+            _gameController.Try = 0;
             GenerateCards();
+            sreenBlocker.SetActive(false);
         }
 
         private void GenerateCards()
@@ -124,6 +126,7 @@ namespace Zenject.GameControl.Card
                 }
                 else
                 {
+                    sreenBlocker.SetActive(true);
                     StartCoroutine(DelayedFlipBack(0.8f));
                 }
             }
@@ -131,12 +134,15 @@ namespace Zenject.GameControl.Card
 
         private void OnCardFlippedBack(CardPresenter card)
         {
-            
+            sreenBlocker.SetActive(false);
         }
 
         private IEnumerator DelayedFlipBack(float delay)
         {
             yield return new WaitForSeconds(delay);
+
+            _gameController.Try++;
+            _signalService.Send(new NewTrySignal());
 
             _firstFlipped?.FlipToBack();
             _secondFlipped?.FlipToBack();
@@ -152,7 +158,6 @@ namespace Zenject.GameControl.Card
             if (allFlipped)
             {   
                 _signalService.Send(new GameWinSignal());
-                
             }
         }
 

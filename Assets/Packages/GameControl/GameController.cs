@@ -1,8 +1,10 @@
+using Packages.GameControl.GameSignals;
+using Packages.GameControl.Signals;
 using ShootCommon.SignalSystem;
 using UnityEngine;
-using Zenject.GameControl.Signals;
+using Zenject;
 
-namespace Zenject.GameControl
+namespace Packages.GameControl
 {
     public class GameController
     {
@@ -11,6 +13,11 @@ namespace Zenject.GameControl
         private GameModel _gameModel = new GameModel();
         
         public GameModel GameModel => _gameModel;
+        
+        public int Try {
+            get => _gameModel.Try;
+            set => _gameModel.Try = value;
+        }
         
         [Inject]
         public void Init(SignalService signalService)
@@ -26,7 +33,19 @@ namespace Zenject.GameControl
             _gameModel.SelectedLevel = signal.SelectedLevel;
             _gameModel.PairsCount = signal.PairsCount;
             _gameModel.TimePerPair = signal.TimePerPair;
+
+            GameModel.ElapsedTime = 0;
         }
         
+        public void TickTimer(float deltaTime)
+        {
+            GameModel.ElapsedTime += deltaTime;
+
+            if (GameModel.ElapsedTime >= GameModel.TimePerPair)
+            {
+                GameModel.ElapsedTime = GameModel.TimePerPair; 
+                _signalService.Send(new GameOverSignal { });
+            }
+        }
     }
 }

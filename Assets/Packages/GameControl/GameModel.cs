@@ -1,4 +1,4 @@
-namespace Zenject.GameControl
+namespace Packages.GameControl
 {
     public class GameModel
     {
@@ -6,5 +6,8 @@ namespace Zenject.GameControl
         public int SelectedLevel;
         public int PairsCount;
         public float TimePerPair;
+
+        public int Try;
+        public float ElapsedTime = 0f;
     }
 }

@@ -1,7 +1,7 @@
 using FirebaseModul;
+using Packages.GameControl;
 using ShootCommon;
 using UnityEngine;
-using Zenject.GameControl;
 
 namespace Zenject
 {

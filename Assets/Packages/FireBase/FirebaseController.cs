@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Firebase;
 using Firebase.Auth;
 using Firebase.Firestore;
+using ShootCommon.InteractiveObjectsSpawnerService;
 using ShootCommon.SignalSystem;
 using UnityEngine;
 using Zenject;
@@ -24,7 +25,6 @@ namespace FirebaseModul
         public void Init(SignalService signalService)
         {
             _signalService = signalService;
-            Initialize();
         }
         
         public async void Initialize()
@@ -50,13 +50,20 @@ namespace FirebaseModul
                 }
                 else
                 {
+                    ShowErrorPanel();
                     Debug.LogError("Firebase dependencies failed: " + dependencyStatus);
                 }
             }
             catch (Exception ex)
             {
+                ShowErrorPanel();
                 Debug.LogError("Firebase init error: " + ex.Message);
             }
+        }
+
+        private void ShowErrorPanel()
+        {
+            InteractiveObjectsManager.Instance.Instantiate("FireErrorPanel", "panels");
         }
 
         private async Task SignInAnonymouslyAsync()

@@ -26,7 +26,7 @@ MonoBehaviour:
   - cardId: 6
     frontSprite: {fileID: 6021453548537641068, guid: 16d34be5280ee455393788ad96d57cdc, type: 3}
   - cardId: 7
-    frontSprite: {fileID: 752205048970604372, guid: 188e90d47a0784e2ea07955da60b7856, type: 3}
+    frontSprite: {fileID: 8849581414691890776, guid: 4266e14c1c74f4940bed57461db7d1d1, type: 3}
   - cardId: 8
     frontSprite: {fileID: 85405039182983323, guid: 9c2037de6418446ee94e529f38e6b3ae, type: 3}
   - cardId: 9
